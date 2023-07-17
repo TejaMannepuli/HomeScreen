@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="homescreen.jsp">
+</head>
+<body>
+  <div class="main">
+    <div class="headerpage">
+      <div class="head"><h1>Hospital System</h1></div>
+      <div class="menu"><ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Login</li>
+      </ul></div>
+    </div>
+  </div>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="full.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="blog-banner-hospital-furniture.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="Banner-Image-tab-mob.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4/ 4</div>
+    <img src="hospital-building-modern-parking-lot-59693686.webp" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides(){
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); 
+    }
+    </script>
+    <div class="middle">
+      <div class="left">Document</div>
+      <div class="right">
+        <h1>Profile</h1>
+        <div class="top">
+          <div class="top1">
+            <h1>PROF.JONATAN PADBERG</h1>
+            <h4>MEDICINE DOCTOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
+          </div>
+          <img src="doctorprofile.jpg" alt="">
+        </div>
+      <table>
+        <tr>
+          <th>EDUCATION</th>
+          <th>CERTIFICATES</th>
+        </tr>
+        <tr>
+          <td>Doctor of Osteopathic Medicine University of Detroit Mercy, Detroit,
+
+            01/2005-01/2008, United States</td>
+          <td>Sports Medicine Trainer Certification
+
+            American College of Sports
+            
+            Medicine
+            
+            05/2019</td>
+        </tr>
+        <tr>
+          <td>Doctorate of Podiatric Medicine
+
+            University of Virginia, Virginia
+            
+            09/2001-06/2005,United States</td>
+          <td>Bachelor of Science in Biology
+
+            University of Detroit Mercy, Detroit,
+            
+            01/1997-01/2001, United States</td>
+        </tr>
+        <tr>
+          <td>Bachelor of Science in Biology
+
+            University of Detroit Mercy, Detroit,
+            
+            01/1997-01/2001, United States</td>
+          <td></td>
+        </tr>
+      </table>
+      <div class="pro">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <p>ntern Research Assistant, XQ Lab, Inc.
+
+          Chicago, IL, United States 05/2018-08/2018</p>
+            <li>Pro-actively participated in multiple experiments and collected and
+
+              analyzed data.</li>
+            <li>Managed relevant databases, developed and implemented new testing
+
+              methods, and maintained various equipment</li>
+            <li>Pro-actively participated in multiple experiments</li>
+      </div>
+      </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    </body>
+    </html>  
